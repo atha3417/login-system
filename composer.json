@@ -1,0 +1,13 @@
+{
+    "name": "atha/login-system",
+    "description": "Just a login system",
+    "keywords": ["php", "codeigniter", "ci", "login"],
+    "license": "None",
+    "authors": [
+        {
+            "name": "Atha Tsaqif",
+            "email": "atha.3417@gmail.com",
+            "homepage": "http://example.com/"
+        }
+    ]
+}
