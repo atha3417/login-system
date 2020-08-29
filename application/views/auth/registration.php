@@ -13,22 +13,23 @@
                         <form class="user" method="Post" action="<?= base_url('auth/registration'); ?>">
 
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="name" placeholder="Full Name" name="name" value="<?= set_value('name'); ?>">
+                                <input type="text" class="form-control form-control-user" id="name" placeholder="Full Name" name="name" value="<?= set_value('name'); ?>" required>
                                 <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control form-control-user" id="email" placeholder="Email Address" name="email" value="<?= set_value('email'); ?>">
+                                <input type="text" class="form-control form-control-user" id="email" placeholder="Email Address" name="email" value="<?= set_value('email'); ?>" required>
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-user form-password" id="password1" placeholder="Password" name="password1">
+                                <input type="password" class="form-control form-control-user form-password" id="password1" placeholder="Password" name="password1" required>
                                 <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-user form-password" id="password2" placeholder="Repeat Password" name="password2">
+                                <input type="password" class="form-control form-control-user form-password" id="password2" placeholder="Repeat Password" name="password2" required>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" class="form-checkbox ml-2">&nbsp;Show Password
+                            <div class="form-group custom-control custom-switch ml-2">
+                                <input type="checkbox" class="custom-control-input form-checkbox" id="password-switch">
+                                <label class="custom-control-label" for="password-switch">Show password</label>
                             </div>
                             <button type="submit" class="btn btn-primary btn-user btn-block">
                                 Register Account
@@ -36,7 +37,7 @@
                         </form>
                         <hr>
                         <div class="text-center">
-                            <a class="small" href="<?= base_url('auth/forgotpassword'); ?>">Forgot Password?</a>
+                            <a class="small" href="<?= base_url('auth/forgotpassword'); ?>">Forgot password?</a>
                         </div>
                         <div class="text-center">
                             <a class="small" href="<?= base_url('auth'); ?>">Already have an account?</a>

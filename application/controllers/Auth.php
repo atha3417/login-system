@@ -19,7 +19,7 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 
 		if ($this->form_validation->run() == false) {
-			$data['title'] = 'Nafrozen | Murah Mudah Cepat';
+			$data['title'] = 'Atha Tsaqif TBZBS';
 			$this->load->view('templates/auth_header', $data);
 			$this->load->view('auth/login');
 			$this->load->view('templates/auth_footer');
@@ -116,7 +116,7 @@ class Auth extends CI_Controller
 
 
 		if ($this->form_validation->run() == false) {
-			$data['title'] = 'Nafrozen | murah mudah cepat';
+			$data['title'] = 'Atha Tsaqif TBZBS';
 			$this->load->view('templates/auth_header', $data);
 			$this->load->view('auth/registration');
 			$this->load->view('templates/auth_footer');
@@ -168,7 +168,7 @@ class Auth extends CI_Controller
         $this->load->library('email',$config);  
 		$this->email->initialize($config); 
 
-        $this->email->from('Atha.3417@gmail.com', 'Nafrozen food');
+        $this->email->from('Atha.3417@gmail.com', 'Atha Tsaqif TBZBS');
         $this->email->to($this->input->post('email'));
 
         if ($type == 'verify') {
